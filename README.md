@@ -127,6 +127,6 @@ Finding the vectors of sentences that have high correlations with the vectors of
 - Character TextSplitter
   -   It splits the text per each separator. (if the selected separator is enter, only enter will be considered)
   -   This might not fit into max_token
-- Recursive TextSplitter
+- ***Recursive TextSplitter*** -> Used in most cases
   -  It splits the text per different separators, recursively. (enter -> full stop -> comma -> ... (recursively))
   -  This can fit into max_token
