@@ -43,7 +43,7 @@ It enables applications that:<br>
    - Document Loader helps LLM to answer "Based on xxx.pdf page ### "
    - Confluence and Notion pages can also be imported as well if a different loader is used.
 2. Splitting Text using TextSplitter
-   - Splitting PDF documents enables the LLM to find relevant information from large PDF (out of token limits).
+   - Splitting PDF documents enables the LLM to find relevant information from large PDFs (out of token limits).
 3. Embed to VectorStore
    - Convert the PDF to numerics to enable the LLM to understand the document.
 4. VectorStore Retriever
@@ -67,5 +67,4 @@ Encoder-Decoder Models <sub>in Green</sub><br>
 <p align='center'>
   <img width=550 src="https://github.com/jasonheesanglee/LLM_Study/assets/123557477/66d0d578-2682-4c28-8665-dce79b173360">
 </p>
-
 
