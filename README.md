@@ -68,3 +68,7 @@ Encoder-Decoder Models <sub>in Green</sub><br>
   <img width=550 src="https://github.com/jasonheesanglee/LLM_Study/assets/123557477/66d0d578-2682-4c28-8665-dce79b173360">
 </p>
 
+## What should we learn to build a ChatBot
+1. Learn to conversate using ChatGPT API
+2. Learn the base structure of ChatGPT API
+3. Learn the useful functions for building a ChatBot
