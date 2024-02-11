@@ -41,7 +41,7 @@ It enables applications that:<br>
 ### Example: Building PDF ChatBot
 1. Uploading the document using Document Loader
    - Document Loader helps LLM to answer "Based on xxx.pdf page ### "
-   - Confluence, Notion pages can be imported as well if different loader is used.
+   - Confluence and Notion pages can also be imported as well if a different loader is used.
 2. Splitting Text using TextSplitter
    - Splitting PDF documents enables the LLM to find relevant information from large PDF (out of token limits).
 3. Embed to VectorStore
@@ -49,7 +49,21 @@ It enables applications that:<br>
 4. VectorStore Retriever
    - Search the embeddings to extract the information that has a high correlation with the question.
 5. QA Chain
-   - Extracts the document that has high correlation with the question.
+   - Extract the document that has a high correlation with the question.
    1. Hand over the question and a relevant text to the LLM as a Prompt, than the LLM understands it.
    2. Hand over to LLM again to repeat step i.
    3. Hand over again to format the answer output.
+
+## LangChain Structure
+Most of the NLP models are based on Transformer Architecture.<br>
+Encoder and Decoder are utilized either independently or together based on the model's purpose.<br>
+**Encoder** -> Understanding the Context<br>
+**Decoder** -> Returns the output based on the output of the Encoder.<br>
+
+There are :<br>
+Encoder Only Models <sub>in Pink</sub><br>
+Decoder Only Models <sub>in Blue</sub><br>
+Encoder-Decoder Models <sub>in Green</sub><br>
+<p align='center'>
+  <img width=550 src="https://github.com/jasonheesanglee/LLM_Study/assets/123557477/66d0d578-2682-4c28-8665-dce79b173360">
+</p>
