@@ -147,5 +147,5 @@ Text Embeddings converts the texts into numeric values, enables to compare the s
 In most cases, it easily embeds with pre-trained models with large-scale corpus.<br>
 By using these Pre-trained Embedding Models, we can embed our sentences without training.<br>
 <p align='center'>
-  <img src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/7e3064d8-496b-410d-82b2-44a2f66923a0'>
+  <img width=550 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/7e3064d8-496b-410d-82b2-44a2f66923a0'>
 </p> 
