@@ -51,5 +51,5 @@ It enables applications that:<br>
 5. QA Chain
    - Extracts the document that has high correlation with the question.
    1. Hand over the question and a relevant text to the LLM as a Prompt, than the LLM understands it.
-   2. Hand over to LLM again to repeat step 1.
+   2. Hand over to LLM again to repeat step i.
    3. Hand over again to format the answer output.
