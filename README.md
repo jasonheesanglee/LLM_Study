@@ -1,4 +1,6 @@
 # LLM Study
+This repository is a record of learning LangChain.
+The [contents](https://www.youtube.com/playlist?list=PLQIgLu3Wf-q_Ne8vv-ZXuJ4mztHJaQb_v) are from a YouTube Channer [모두의AI](https://www.youtube.com/@AI-km1yn)
 
 ## What is LangChain?
 <sub>(from [LangChain Github](https://github.com/langchain-ai/langchain))</sub><br>
@@ -73,3 +75,6 @@ Encoder-Decoder Models <sub>in Green</sub><br>
 1. Learn to conversate using ChatGPT API 
 2. Learn the base structure of ChatGPT API
 3. Learn the useful functions for building a ChatBot
+
+## What is Prompt?
+
