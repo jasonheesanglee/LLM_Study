@@ -37,3 +37,19 @@ It enables applications that:<br>
 
 **Agents**: A module that enables the LLM to do the job that used to cannot be done with the existing Prompt Template.
 > Example: Custom Agent, Custom MultiAction Agent, Conversation Agent, etc...
+
+### Example: Building PDF ChatBot
+1. Uploading the document using Document Loader
+   - Document Loader helps LLM to answer "Based on ~~.pdf page ~~ "
+   - Confluence, Notion pages can be imported as well if different loader is used.
+2. Splitting Text using TextSplitter
+   - Splitting PDF documents enables the LLM to find relevant information from large PDF (out of token limits).
+3. Embed to VectorStore
+   - Convert the PDF to numerics to enable the LLM to understand the document.
+4. VectorStore Retriever
+   - Search the embeddings to extract the information that has a high correlation with the question.
+5. QA Chain
+   - Extracts the document that has high correlation with the question.
+   1. Hand over the question and a relevant text to the LLM as a Prompt, than the LLM understands it.
+   2. Hand over to LLM again to repeat step 1.
+   3. Hand over again to format the answer output.
