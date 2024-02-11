@@ -83,4 +83,5 @@ This input is barely hard-coded but, in many cases, is composed of various compo
 LangChain supports various Classes and Functions to make the building prompt process easier.<br>
 
 ### Prompt Template
+[Prompt Templates](https://github.com/jasonheesanglee/LLM_Study/blob/main/Prompt_Templates.ipynb)
 Recommend a food that contains {food 1} and {food 2} and tell me the recipe for it.
