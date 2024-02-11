@@ -20,4 +20,7 @@ It enables applications that:<br>
 
 ##  Types of LangChain and their functions
 
-**LLM**: Large Language Model -> Key component of LangChain that functions as an engine of the Generative Models.
+**LLM**: Large Language Model -> Key component of LangChain that functions as an engine of the Generative Models.<br>
+> Example: GPT-3.5, PaLM-2, LLaMA, StableVicuna, WizardLM, MPT, etc...
+**Prompts**: A Statement instructing LLM<br>
+> Elements: Prompt Templates, Chat Prompt Templates, Example Selectors, Output Parsers.
