@@ -88,21 +88,28 @@ Recommend a food that contains {food 1} and {food 2} and tell me the recipe for 
 
 ## Retrieval
 
-**LangChain Retrieval**
-1. Document Loaders -><br>Responsible for calling the external document
+### What is RAG?
+RAG -> Retrieval Augmented Generation<br>
+RAG is a framework that helps LLM refer to an external document to answer.<br>
+
+**RAG Process**
+1. Document Loaders -><br>Responsible for loading the external document
 2. Text Splitters -><br>Responsible for splitting long documents into small pieces
 3. Vector Embedding module -><br>Responsible for converting the strings (user question) into numbers and storing them in Vector Stores<br>Responsible for converting the strings (document) into numbers and storing them in Vector Stores
 4. Retrievers -><br>Responsible for searching the most similar sentence in document with the user's question.<br>Hand it over to Chain
 5. Chain -><br>Responsible for generating the answer.
 
-### What is RAG?
-RAG -> Retrieval Augmented Generation<br>
-RAG is a framework that helps LLM refer to an external document to answer.<br>
-
 ### Document Retrieval
 ***<u>RAG Structure</u>***
-1. User : Input question
-2. Q/A system : search for a similar sentence in an external Data Storage<sub>(Vector DB / Feature Store, etc.)</sub>, and question LLM with the external sentence. 
-3. LLM : Answers the question referring to the document.
+1. User: Input question
+2. Q/A system: search for a similar sentence in an external Data Storage<sub>(Vector DB / Feature Store, etc.)</sub>, and question LLM with the external sentence. 
+3. LLM: Answers the question referring to the document.
 
-Document Loaders is responsible for calling the external document
+### Document Loaders
+A module that loads various types of documents as a special object for RAG
+Document's structure loaded by Document Loaders
+- page_content
+  - Contents of the document
+- metadata
+  - Information about the document (where it is stored, what is the title of the document, what part of the document the information is (source of information), etc.)
+  
