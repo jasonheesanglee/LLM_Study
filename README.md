@@ -16,11 +16,22 @@ It enables applications that:<br>
 ***LangChain can overcome those limitations of ChatGPT.***<br><br>
 - **Fine-Tuning**:<br>Updating the weights of the deep learning models to the desired purpose.
 - **N-Shot Learning**:<br>Suggest 0 ~ N number of the output example, it controls the deep learning model to produce a similar output that fits the desired purpose.
-- **In-Context Learning**: ----> ***LangChain***<br> Suggests a context to the deep learning model, and controls the deep learning model to produce the output based on this context.
+- **In-Context Learning**: ----> ***LangChain***<br> Suggests a context to the deep learning model and controls the deep learning model to produce the output based on this context.
 
 ##  Types of LangChain and their functions
 
 **LLM**: Large Language Model -> Key component of LangChain that functions as an engine of the Generative Models.<br>
 > Example: GPT-3.5, PaLM-2, LLaMA, StableVicuna, WizardLM, MPT, etc...
+
 **Prompts**: A Statement instructing LLM<br>
 > Elements: Prompt Templates, Chat Prompt Templates, Example Selectors, Output Parsers.
+
+**Index**: A structuring module for LLM to search the document easily and conveniently.
+> Example: Document Loaders, Text Splitters, VectorStores, Retrievers, etc...
+
+**Memory**: A module that enables a continuous conversation based on the chat history.
+> Example: ConversationBufferMemory, Entity Memory, Conversation Knowledge Graph Memory, etc...
+
+**Chain**: A key component that enables a continuously calling LLM by forming a chain of LLM.
+> Example: LLM Chain, Question Answering, Summarization, Retrieval Question/Answering, etc...
+
