@@ -77,4 +77,7 @@ Encoder-Decoder Models <sub>in Green</sub><br>
 3. Learn the useful functions for building a ChatBot
 
 ## What is Prompt?
-
+Prompt means the input to the model.<br>
+This input is barely hard-coded but, in many cases, is composed of various components.<br>
+"Prompt Templates" is responsible for the structure of the input.<br>
+LangChain supports various Classes and Functions to make the building prompt process easier.<br>
