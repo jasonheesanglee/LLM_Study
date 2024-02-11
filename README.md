@@ -83,5 +83,26 @@ This input is barely hard-coded but, in many cases, is composed of various compo
 LangChain supports various Classes and Functions to make the building prompt process easier.<br>
 
 ### Prompt Template
-[Prompt Templates](https://github.com/jasonheesanglee/LLM_Study/blob/main/Prompt_Templates.ipynb)
+[Prompt Templates](https://github.com/jasonheesanglee/LLM_Study/blob/main/Prompt_Templates.ipynb)<br>
 Recommend a food that contains {food 1} and {food 2} and tell me the recipe for it.
+
+## Retrieval
+
+**LangChain Retrieval**
+1. Document Loaders -><br>Responsible for calling the external document
+2. Text Splitters -><br>Responsible for splitting long documents into small pieces
+3. Vector Embedding module -><br>Responsible for converting the strings (user question) into numbers and storing them in Vector Stores<br>Responsible for converting the strings (document) into numbers and storing them in Vector Stores
+4. Retrievers -><br>Responsible for searching the most similar sentence in document with the user's question.<br>Hand it over to Chain
+5. Chain -><br>Responsible for generating the answer.
+
+### What is RAG?
+RAG -> Retrieval Augmented Generation<br>
+RAG is a framework that helps LLM refer to an external document to answer.<br>
+
+### Document Retrieval
+***<u>RAG Structure</u>***
+1. User : Input question
+2. Q/A system : search for a similar sentence in an external Data Storage<sub>(Vector DB / Feature Store, etc.)</sub>, and question LLM with the external sentence. 
+3. LLM : Answers the question referring to the document.
+
+Document Loaders is responsible for calling the external document
