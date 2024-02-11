@@ -131,3 +131,14 @@ Finding the vectors of sentences that have high correlations with the vectors of
 - ***Recursive TextSplitter*** -> Used in most cases
   -  It splits the text per different separators, recursively. (enter -> full stop -> comma -> ... (recursively))
   -  This can fit into max_token
+ 
+- Other Splitters
+  - In most of the cases, Character Text Splitter and Recursive Text Splitter will do the work.
+  - However, for some cases like "codes" and "LaTex", these two splitters might fail on reading the document.
+  - Therefore, some special additions are required.<br><br>
+  - For codes, we can import `Language` from langchain.text_splitter
+
+- Token Level Splitters
+  - The purpose of the text splits is for LLM to take tokens as input as much as its max_len.
+  - Therefore, we can also split the text based on the number of tokens by importing `tiktoken`.
+  
