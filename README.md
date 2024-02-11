@@ -40,7 +40,7 @@ It enables applications that:<br>
 
 ### Example: Building PDF ChatBot
 1. Uploading the document using Document Loader
-   - Document Loader helps LLM to answer "Based on ~~.pdf page ~~ "
+   - Document Loader helps LLM to answer "Based on xxx.pdf page ### "
    - Confluence, Notion pages can be imported as well if different loader is used.
 2. Splitting Text using TextSplitter
    - Splitting PDF documents enables the LLM to find relevant information from large PDF (out of token limits).
