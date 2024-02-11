@@ -140,7 +140,7 @@ Finding the vectors of sentences that have high correlations with the vectors of
 
 - Token Level Splitters
   - The purpose of the text splits is for LLM to take tokens as input as much as its max_len.
-  - Therefore, we can also split the text based on the number of tokens by importing `tiktoken`.
+  - Therefore, we can also split the text based on the number of tokens by importing modules such as `tiktoken`.
  
 ### Text Embeddings
 Text Embeddings converts the texts into numeric values, enables to compare the similarity between different sentences.<br>
