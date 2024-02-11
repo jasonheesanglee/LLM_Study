@@ -69,7 +69,7 @@ Encoder-Decoder Models <sub>in Green</sub><br>
 </p>
 
 ## What should we learn to build a ChatBot
-1. Learn to conversate using ChatGPT API
+[ChatGPT Sample ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/chatgpt_api_sample.ipynb)
+1. Learn to conversate using ChatGPT API 
 2. Learn the base structure of ChatGPT API
 3. Learn the useful functions for building a ChatBot
-[ChatGPT Sample ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/chatgpt_api_sample.ipynb)
