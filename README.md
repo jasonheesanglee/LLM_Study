@@ -60,10 +60,12 @@ Encoder and Decoder are utilized either independently or together based on the m
 **Encoder** -> Understanding the Context<br>
 **Decoder** -> Returns the output based on the output of the Encoder.<br>
 
-There are :<br>
+There are:<br>
 Encoder Only Models <sub>in Pink</sub><br>
 Decoder Only Models <sub>in Blue</sub><br>
 Encoder-Decoder Models <sub>in Green</sub><br>
 <p align='center'>
   <img width=550 src="https://github.com/jasonheesanglee/LLM_Study/assets/123557477/66d0d578-2682-4c28-8665-dce79b173360">
 </p>
+
+
