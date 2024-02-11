@@ -112,4 +112,11 @@ Document's structure loaded by Document Loaders
   - Contents of the document
 - metadata
   - Information about the document (where it is stored, what is the title of the document, what part of the document the information is (source of information), etc.)
-  
+
+### Text Splitters
+A module that divides a document into a number of chunks so that an LLM that has token limits can refer to a number of sentences.<br>
+The chunks are stored in the Vector store as embedding vectors.<br>
+Each Embedding vectors is each chunk.<br>
+1 Chunk = 1 Embedding Vectors (Converted into numerics)<br>
+Finding the vectors of sentences that have high correlations with the vectors of the user's question.<br><br>
+
