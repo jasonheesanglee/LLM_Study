@@ -119,4 +119,6 @@ The chunks are stored in the Vector store as embedding vectors.<br>
 Each Embedding vectors is each chunk.<br>
 1 Chunk = 1 Embedding Vectors (Converted into numerics)<br>
 Finding the vectors of sentences that have high correlations with the vectors of the user's question.<br><br>
-
+<p align='center'>
+  <img width=550 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/ffcdee60-0daf-4948-94f0-be24b81b2693'>
+</p>
