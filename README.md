@@ -1,4 +1,4 @@
-# LLM_Study
+# LLM Study
 
 ## What is LangChain?
 <sub>(from [LangChain Github](https://github.com/langchain-ai/langchain))</sub><br>
@@ -17,3 +17,7 @@ It enables applications that:<br>
 - **Fine-Tuning**:<br>Updating the weights of the deep learning models to the desired purpose.
 - **N-Shot Learning**:<br>Suggest 0 ~ N number of the output example, it controls the deep learning model to produce a similar output that fits the desired purpose.
 - **In-Context Learning**: ----> ***LangChain***<br> Suggests a context to the deep learning model, and controls the deep learning model to produce the output based on this context.
+
+##  Types of LangChain and their functions
+
+**LLM**: Large Language Model -> Key component of LangChain that functions as an engine of the Generative Models.
