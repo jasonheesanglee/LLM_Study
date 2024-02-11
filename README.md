@@ -122,3 +122,11 @@ Finding the vectors of sentences that have high correlations with the vectors of
 <p align='center'>
   <img width=550 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/ffcdee60-0daf-4948-94f0-be24b81b2693'>
 </p>
+
+#### Types of Text Splitters
+- Character TextSplitter
+  -   It splits the text per each separator. (if the selected separator is enter, only enter will be considered)
+  -   This might not fit into max_token
+- Recursive TextSplitter
+  -  It splits the text per different separators, recursively. (enter -> full stop -> comma -> ... (recursively))
+  -  This can fit into max_token
