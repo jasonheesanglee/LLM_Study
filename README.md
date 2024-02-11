@@ -9,7 +9,7 @@ It enables applications that:<br>
 ---> LangChain is a Tool that helps utilize the Language Models at their best.<br>
 
 ## Why should we use LangChain?
-- **ChatGPT** for example
+- **ChatGPT**<sub>for example</sub>
   1. **Limited access to data**: ----> ***Searching the information based on VectorStore or Search Agent utilization.***<br>LLM used on ChatGPT is trained on the data up until a certain date, and if the user asks about a more recent event, ChatGPT will not provide an answer or provide a fake answer (hallucination).
   2. **Limited number of Tokens**: ----> ***Splitting the document using TextSplitter***<br>Each GPT model has limits on the token counts; therefore, it is hard to implement in real-life/business usage.
   3. **Hallucination**: ----> ***Insert a prompt to limit the deep learning model to answer only based on the given document.***<br>It often responds with irrelevant or fake information when the user asks about Facts.<br>
