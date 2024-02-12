@@ -179,12 +179,15 @@ Saving Vector Store in a local database with the `persist()` function, we can pa
 #### FAISS
 FAISS (Facebook AI Semantic Search) is a library that offers effective similarity searching and clustering in high-density vectors developed by Facebook.<br>
 The algorithm that searches all size vector unions is included and can also search vectors that don't fit into RAM.<br>
-Also, evaluation metrics, parameter tuning functions are included in the package as well.<br>
+Also, evaluation metrics and parameter tuning functions are included in the package as well.<br>
 
 `max_marginal_relevance_search` -> It doesn't only return the query-relevant part of the document but varies the content of the output to output.<br>(texts from different parts of the document) (다양성 추구)
 
 ### Retrieval
 Retriever takes the embedded text from the vector store as a context with the embedded query and hands it over to LLM.<br>
+Retriever is an interface that returns the document when the atypical query is given.<br>
+Retriever can only return or search the document without saving the document.<br>
+In other words, Retriever is a module that makes the search easy.<br>
 
 #### Chain
 4 chains in Retriever.
@@ -210,7 +213,7 @@ Retriever takes the embedded text from the vector store as a context with the em
   - High time & computation cost.
   - Iterates over each chunk, passes query & chunk as a prompt, hands it over to LLM, takes each output, and adds it to the next iteration.
   - Not really used as LLM generates answers for each query.
-  - If have enough time cost and requires highly accurate response, this method could be implemented.
+  - If have enough time cost and requires a highly accurate response, this method could be implemented.
 <p align='center'>
   <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/208a1bc0-1cff-47a0-a1c6-ef0142f81516)'>
 </p>
