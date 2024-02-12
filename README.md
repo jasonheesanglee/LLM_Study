@@ -236,6 +236,7 @@ Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/SQLAgent.ipynb](ht
 Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb)
 
 ## Creating RAG system with OpenSource LLM
+[https://github.com/jasonheesanglee/LLM_Study/blob/main/Creating_RAG_with_OpenSource_LLM.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/Creating_RAG_with_OpenSource_LLM.ipynb)
 ### Why OpenSource LLM?
 |API | OpenSource |
 | :---: | :---: |
@@ -252,3 +253,43 @@ Therefore quantization is needed in prior using them.<br>
   - `bnb_4bit_use_double_quant=True` : Utilizes double quantization on training and inference to increase the memory efficiency.
   - `bnb_4bit_quant_type="nf4"`: Utilizes NF4 (Normal 4 Bit Float) quantization instead of (4 bit Float) quantization.<br><sub>Details from [QLoRA](https://github.com/artidoro/qlora?tab=readme-ov-file#quantization) : Note that there are two supported quantization datatypes fp4 (four bit float) and nf4 (normal four bit float).<br>The latter is theoretically optimal for normally distributed weights and we recommend using nf4. </sub>
   - `bnb_4bit_comput_dtype=torch.bfloat16` : Utilizes torch.bfloat16 dtype during the computation.<br>Default : float32
+2. Load the model with Quantization Config
+  ```
+  bnb_config = BitsAndBytesConfig(
+      load_in_4bit=True,
+      bnb_4bit_use_double_quant=True,
+      bnb_4bit_quant_type='nf4',
+      bnb_4bit_compute_dtype=torch.bfloat16
+  )
+  ```
+3. Print Model
+```
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(78464, 4096, padding_idx=0)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaAttention(
+          (q_proj): Linear4bit(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear4bit(in_features=4096, out_features=512, bias=False)
+          (v_proj): Linear4bit(in_features=4096, out_features=512, bias=False)
+          (o_proj): Linear4bit(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear4bit(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear4bit(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear4bit(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm()
+        (post_attention_layernorm): LlamaRMSNorm()
+      )
+    )
+    (norm): LlamaRMSNorm()
+  )
+  (lm_head): Linear(in_features=4096, out_features=78464, bias=False)
+)
+```
+
+4. 
