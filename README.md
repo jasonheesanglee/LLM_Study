@@ -167,3 +167,11 @@ Vector Store stores the embeddings of the text converted by the text embedding m
 - Text Search Databases
 - Vector-Capable NoSQL Databases
 - Vector-Capable SQL Databases
+ 
+#### Chroma
+Chroma is an OpenSourced Vector Database<br>
+Basically, VectorStore stores the vectors temporarily.<br>
+When passing the selected Text and Embedding Function to the `from_documents()` function, it converts the text to vectors with the given embedding function and stores it in the created temporal DataBase.<br>
+Then, pass the query to `similarity_search()` function, it searches the vector with high vector similarity and returns the output in natural language.<br><br>
+However, in many real-life cases, we need to store the document in a personal disk, and call it whenever we need it.<br>
+Saving Vector Store in a local database with `persist()` function, we can pass the location of the local database where the vector store is saved, when we call Chroma next time.<br>
