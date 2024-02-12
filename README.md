@@ -236,3 +236,9 @@ Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/SQLAgent.ipynb](ht
 Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb)
 
 ## Creating RAG system with OpenSource LLM
+Why OpenSource LLM?<br>
+|API | OpenSource |
+| :---: | :---: |
+|1. Cost per usage | 1. High initial cost for server establishment, but no additional cost |
+|2. Service Quality could decrease due to the usage of API | 2. No operational risk |
+|3. Possible Data Leak | 3. No issue with Data Leak |
