@@ -230,6 +230,9 @@ In other words, Retriever is a module that makes the search easy.<br>
 Why do we need SQL?
 - Easy to work with a large amount of data.
 - We don't need to use SQL, but use LLM to use SQL.
+Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/SQLAgent.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/SQLAgent.ipynb)
 
 ## Creating RAG system with Gemini Pro
+Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb)
 
+## Creating RAG system with OpenSource LLM
