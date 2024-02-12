@@ -40,6 +40,10 @@ It enables applications that:<br>
 **Agents**: A module that enables the LLM to do the job that used to cannot be done with the existing Prompt Template.
 > Example: Custom Agent, Custom MultiAction Agent, Conversation Agent, etc...
 
+<p align='center'>
+  <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/d88773d7-2723-4282-9050-ea5fa2ae6553'>
+</p>
+
 ### Example: Building PDF ChatBot
 1. Uploading the document using Document Loader
    - Document Loader helps LLM to answer "Based on xxx.pdf page ### "
