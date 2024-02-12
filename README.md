@@ -225,3 +225,11 @@ In other words, Retriever is a module that makes the search easy.<br>
 <p align='center'>
   <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/7331483e-3ddc-47e1-8538-37cd6e6520d1)'>
 </p>
+
+## SQL Agent
+Why do we need SQL?
+- Easy to work with a large amount of data.
+- We don't need to use SQL, but use LLM to use SQL.
+
+## Creating RAG system with Gemini Pro
+
