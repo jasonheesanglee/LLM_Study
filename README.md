@@ -172,13 +172,53 @@ Vector Store stores the embeddings of the text converted by the text embedding m
 Chroma is an OpenSourced Vector Database<br>
 Basically, VectorStore stores the vectors temporarily.<br>
 When passing the selected Text and Embedding Function to the `from_documents()` function, it converts the text to vectors with the given embedding function and stores it in the created temporal DataBase.<br>
-Then, pass the query to `similarity_search()` function, it searches the vector with high vector similarity and returns the output in natural language.<br><br>
-However, in many real-life cases, we need to store the document in a personal disk, and call it whenever we need it.<br>
-Saving Vector Store in a local database with `persist()` function, we can pass the location of the local database where the vector store is saved, when we call Chroma next time.<br>
+Then, pass the query to the `similarity_search()` function; it searches the vector with high vector similarity and returns the output in the natural language.<br><br>
+However, in many real-life cases, we need to store the document on a personal disk and call it whenever we need it.<br>
+Saving Vector Store in a local database with the `persist()` function, we can pass the location of the local database where the vector store is saved when we call Chroma next time.<br>
 
 #### FAISS
-FAISS (Facebook AI Semantic Search) is a library that offers effective similarity searching and clustering in high-density vectors, developed by Facebook.<br>
-Algorithm that search all size vector union is included, can also search vectors that doesn't fit into RAM.<br>
+FAISS (Facebook AI Semantic Search) is a library that offers effective similarity searching and clustering in high-density vectors developed by Facebook.<br>
+The algorithm that searches all size vector unions is included and can also search vectors that don't fit into RAM.<br>
 Also, evaluation metrics, parameter tuning functions are included in the package as well.<br>
 
-`max_marginal_relevance_search` -> It doesn't only return the query-relevant part of the document but varies the content of the output to output. (texts from different part of the document) (다양성 추구)
+`max_marginal_relevance_search` -> It doesn't only return the query-relevant part of the document but varies the content of the output to output.<br>(texts from different parts of the document) (다양성 추구)
+
+### Retrieval
+Retriever takes the embedded text from the vector store as a context with the embedded query and hands it over to LLM.<br>
+
+#### Chain
+4 chains in Retriever.
+
+- Stuff Documents Chain
+  - The most simple structure of all chains.
+  - A Token length issue could be raised.
+  - Passes Query & Chunks of similar texts directly to LLM as a prompt: {'Question':query, 'Context':docs[0] + docs[1] + ... + docs[n]}
+<p align='center'>
+  <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/3124106d-0797-474d-8b85-23936c3cc7d2)'>
+</p>
+
+- Map Reduce Documents Chain
+  - Summarizes each text chunk (Map process), Generates the final summarization from text chunk summarization (Reduce process), passes the query and final summary to LLM.
+  - Token length issue could be solved.
+  - High time & computation cost.
+<p align='center'>
+  <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/ac35143f-9a33-4a53-a388-252bc878984f)'>
+</p>
+
+- Refine Documents Chain
+  - Aimed to get high-quality responses.
+  - High time & computation cost.
+  - Iterates over each chunk, passes query & chunk as a prompt, hands it over to LLM, takes each output, and adds it to the next iteration.
+  - Not really used as LLM generates answers for each query.
+  - If have enough time cost and requires highly accurate response, this method could be implemented.
+<p align='center'>
+  <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/208a1bc0-1cff-47a0-a1c6-ef0142f81516)'>
+</p>
+
+- Map Re-Rank Documents Chain
+  - With a query, LLM generates responses for each chunk; the response consists of the answer and score (query & chunk's correlation score), ranks each response, and returns the response with the highest correlation score.
+  - High time & computation cost.
+  - This is used when accurate response is required.
+<p align='center'>
+  <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/7331483e-3ddc-47e1-8538-37cd6e6520d1)'>
+</p>
