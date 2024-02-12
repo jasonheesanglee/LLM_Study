@@ -236,7 +236,7 @@ Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/SQLAgent.ipynb](ht
 Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb)
 
 ## Creating RAG system with OpenSource LLM
-[https://github.com/jasonheesanglee/LLM_Study/blob/main/Creating_RAG_with_OpenSource_LLM.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/Creating_RAG_with_OpenSource_LLM.ipynb)
+Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/Creating_RAG_with_OpenSource_LLM.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/Creating_RAG_with_OpenSource_LLM.ipynb)
 ### Why OpenSource LLM?
 |API | OpenSource |
 | :---: | :---: |
