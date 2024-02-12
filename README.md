@@ -291,5 +291,3 @@ LlamaForCausalLM(
   (lm_head): Linear(in_features=4096, out_features=78464, bias=False)
 )
 ```
-
-4. 
