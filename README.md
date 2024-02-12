@@ -1,5 +1,5 @@
 # LLM Study
-This repository is a record of learning LangChain.
+This repository is a record of learning LangChain.<br>
 The [contents](https://www.youtube.com/playlist?list=PLQIgLu3Wf-q_Ne8vv-ZXuJ4mztHJaQb_v) are from a YouTube Channer [모두의AI](https://www.youtube.com/@AI-km1yn)
 
 ## What is LangChain?
