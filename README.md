@@ -175,3 +175,10 @@ When passing the selected Text and Embedding Function to the `from_documents()` 
 Then, pass the query to `similarity_search()` function, it searches the vector with high vector similarity and returns the output in natural language.<br><br>
 However, in many real-life cases, we need to store the document in a personal disk, and call it whenever we need it.<br>
 Saving Vector Store in a local database with `persist()` function, we can pass the location of the local database where the vector store is saved, when we call Chroma next time.<br>
+
+#### FAISS
+FAISS (Facebook AI Semantic Search) is a library that offers effective similarity searching and clustering in high-density vectors, developed by Facebook.<br>
+Algorithm that search all size vector union is included, can also search vectors that doesn't fit into RAM.<br>
+Also, evaluation metrics, parameter tuning functions are included in the package as well.<br>
+
+`max_marginal_relevance_search` -> It doesn't only return the query-relevant part of the document but varies the content of the output to output. (texts from different part of the document) (다양성 추구)
