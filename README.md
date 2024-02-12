@@ -236,9 +236,19 @@ Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/SQLAgent.ipynb](ht
 Code: [https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb](https://github.com/jasonheesanglee/LLM_Study/blob/main/ChatBot_with_GeminiPro.ipynb)
 
 ## Creating RAG system with OpenSource LLM
-Why OpenSource LLM?<br>
+### Why OpenSource LLM?
 |API | OpenSource |
 | :---: | :---: |
 |1. Cost per usage | 1. High initial cost for server establishment, but no additional cost |
 |2. Service Quality could decrease due to the usage of API | 2. No operational risk |
 |3. Possible Data Leak | 3. No issue with Data Leak |
+
+### Quantization
+Most of the GPU on personal PC or server can barely load or infer 7B parameter LLM models.<br>
+Therefore quantization is needed in prior using them.<br>
+#### Process of quantization
+1. Defining parameters with `BitsandBytes` `Config`.
+  - `load_in_4bit = True` : Assigns the module to convert and load the model in 4bit.
+  - `bnb_4bit_use_double_quant=True` : Utilizes double quantization on training and inference to increase the memory efficiency.
+  - `bnb_4bit_quant_type="nf4"`: Utilizes NF4 (Normal 4 Bit Float) quantization instead of (4 bit Float) quantization.<br><sub>Details from [QLoRA](https://github.com/artidoro/qlora?tab=readme-ov-file#quantization) : Note that there are two supported quantization datatypes fp4 (four bit float) and nf4 (normal four bit float).<br>The latter is theoretically optimal for normally distributed weights and we recommend using nf4. </sub>
+  - `bnb_4bit_comput_dtype=torch.bfloat16` : Utilizes torch.bfloat16 dtype during the computation.<br>Default : float32
