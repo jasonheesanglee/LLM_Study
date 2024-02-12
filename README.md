@@ -149,3 +149,17 @@ By using these Pre-trained Embedding Models, we can embed our sentences without 
 <p align='center'>
   <img width=550 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/7e3064d8-496b-410d-82b2-44a2f66923a0'>
 </p> 
+
+### Vector Store
+Vector Store stores the embeddings of the text converted by the text embedding module/
+- ***Pure Vector Databases***
+  - Can store only vectors in the database
+  - Contains many convenient tools such as update, delete, etc.
+  - eg. Pinecone, Qdrant, Chroma (Free), Weaviate
+- ***Vector Libraries***
+  - Specializes in Vector Similarity computation.
+  - Can store the vectors as well, but the performance as a Database is worse than the ones of Pure Vector Databases.
+  - eg. Faiss (AI Semantic Search Tool)
+- Text Search Databases
+- Vector-Capable NoSQL Databases
+- Vector-Capable SQL Databases
