@@ -322,4 +322,19 @@ Let's say we have a document structured as below.
 If the most similar text with the query is within the chunk 1-1.<br>
 However, if a part of the information is in 1-1, and the other part of the information is in 1-2, it is better to use the whole page 1 as the reference document than only having 1-1 or 1-2 as the reference document.<br>
 By doing so, the response takes more context.<br><br>
-----> Token does not limit to 500, but the whole page becomes limit.
+----> Token is not limited to 500, but the whole page becomes limited.
+
+
+## Self-Querying Retriever
+Creates filters based on the document's metadata to generate more accurate responses.<br>
+E.g.,<br>
+`Could you please recommend me a Sci-Fi movie that has an average score of over 9?`<br><br>
+***Normal RAG***<br>
+-> Find relevant documents, but there is no score information.<br>
+-> `There is no score information, but we have...`<br>
+***Self-Querying RAG***<br>
+-> Find metadata of the document & Performs Self-Query (Rating > 9, Genre=SF)<br>
+-> `There is 'Jurassic Park' by Steven SpielBerg`<br>
+
+
+
