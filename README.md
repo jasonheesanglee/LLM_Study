@@ -298,11 +298,11 @@ A high-end technique is needed to enhance the RAG quality for real-life product 
 
 ### Struggles when building RAG
 - Retriever's task is to provide a high-quality response by understanding the user's purpose.
-  - People expects to get a great answer even with a simple query.
-  - Context in prior and after, should be well-considered by LLM.
-  - Do not need Semantic search but need query.
+  - People expects to get a great answer even with a simple query. ----> Multi-Query Retriever (개떡 찰떡)
+  - Context in prior and after, should be well-considered by LLM. ----> Parent-Document
+  - Do not need Semantic search but need query. ----> Self-Querying Retriever
     - Semantic Search simply compares the embeddings of the query and the data and sends it to LLM.
     - This may not show consistency when we ask the same question in a bit different wording to the model.
-    - if the request is needed to be precisesly cut the data, query works better than the semantic search.
+  - if the request is needed to be precisesly cut the data, query works better than the semantic search. ----> Time-Weighted Retriever
     - Take less reference from the older document. (Make preference on the recent documents.)
 
