@@ -306,3 +306,10 @@ A high-end technique is needed to enhance the RAG quality for real-life product 
   - if the request is needed to be precisesly cut the data, query works better than the semantic search. ----> Time-Weighted Retriever
     - Take less reference from the older document. (Make preference on the recent documents.)
 
+### Multi-Query Retriever
+Regenerating a simple question to a number of similar question.
+
+| Query | Regen | Vector Store | LLM |
+| :--- | :--- | :--- | :--- |
+| How good is Bank B's loan service? | -- Without Multi Query --> | ----> | Bank B's loan service is extra-ordinary.|
+|  How good is Bank B's loan service? |  How good is the interest rate of Bank B's loan service?<br>How good is the conditions of Bank B's loan service?<br>How good is the user review of Bank B's loan service? | ---> | Summary of Bank B's Service:<br> - Interest Rate: ...<br> - Conditions: ...<br> - User Reviews...|
