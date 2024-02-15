@@ -291,3 +291,8 @@ LlamaForCausalLM(
   (lm_head): Linear(in_features=4096, out_features=78464, bias=False)
 )
 ```
+
+## RAG techniques
+It is comparatively easy to simply build RAG system.<br>
+A high-end technique is needed to enhance the RAG quality for real-life product development.
+
