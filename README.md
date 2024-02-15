@@ -315,4 +315,11 @@ Regenerating a simple question to a number of similar questions.
 |  How good is Bank B's loan service? |  How good is the interest rate of Bank B's loan service?<br>How good is the conditions of Bank B's loan service?<br>How good is the user review of Bank B's loan service? | ---> | Summary of Bank B's Service:<br> - Interest Rate: ...<br> - Conditions: ...<br> - User Reviews...|
 
 ### Parent Document Retriever
+Let's say we have a document structured as below.
+<p align='center'>
+  <img width=750 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/4729e156-0538-4b2b-a777-3e4d9d8b53a6'>
+</p>
+If the most similar text with the query is within the chunk 1-1.<br>
+However, if a part of the information is in 1-1, and the other part of the information is in 1-2, it is better to use the whole page 1 as the reference document than only having 1-1 or 1-2 as the reference document.<br>
+By doing so, the response takes more context.<br><br>
 
