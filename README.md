@@ -337,4 +337,11 @@ E.g.,<br>
 -> `There is 'Jurassic Park' by Steven SpielBerg`<br>
 
 
+## Time-weighted Vector Retriever
+Refers to the most recently utilized document and maintains the freshness of the response.<br>
+eg.<br>
+`Query`: Can you recommend an SF movie with a rate of over 9?<br>
+`User's intention`: An SF Movie + Rate over 9 + Recent movies<br>
+-> Give a penalty as time passes.<br>
+$\text{semantic similarity} + (1.0 - \text{decay rate})^\text{Time Passed}$
 
