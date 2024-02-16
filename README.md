@@ -353,7 +353,14 @@ There are two types of retrievers: 1. Sparse & 2. Dense
 
 | Sparse Retriever | | Dense Retriever |
 | :---:| :---: | :---: |
-|Sparse creates the matrix by counting how many times each word appears in the text, then use the index of the matrix.| Input |While Dense Retriever uses the index of the matrix, an output of the document was inserted into a deep learning encoder.|
+|Sparse creates the matrix by counting how many times each word appears in the text and then using the index of the matrix.| Input |While Dense Retriever uses the index of the matrix, an output of the document was inserted into a deep learning encoder.|
 |Convenient and Quick<br>Strong in Out of Domain Search | Strength | Good quality of the context basis search output<br>Able to process different-sound-same-meaning words |
 |Unable to process different-sound-same-meaning words.<br>Hard to understand the context. | Weakness | Often doesn't include the keyword.|
 
+## Long-Context-Reorder
+Reorders the order of the reference documents.
+In most cases, when the RAG system is referring to a long context (over 20 total retrieved documents), the LLM doesn't take a closer look at the documents in the middle. (As below.)<br>
+<p align='center'>
+  <img width=450 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/3f7cc207-08ca-4ca3-8c55-b6b049f3f4ee'>
+</p><br>
+Therefore, if we reorder the documents that have a high correlation at the very beginning or at the very end of the RAG, the model would refer to them more.
