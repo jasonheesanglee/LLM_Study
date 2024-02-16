@@ -345,3 +345,15 @@ eg.<br>
 -> Give a penalty as time passes.<br>
 $\text{semantic similarity} + (1.0 - \text{decay rate})^\text{Time Passed}$
 
+## Ensemble Retriever
+There are two types of retrievers: 1. Sparse & 2. Dense
+<p align='center'>
+  <img width= 600 src='https://github.com/jasonheesanglee/LLM_Study/assets/123557477/ff9d7542-22d7-478e-a9d3-9e137086c95d'>
+</p>
+
+| Sparse Retriever | | Dense Retriever |
+| :---:| :---: | :---: |
+|Sparse creates the matrix by counting how many times each word appears in the text, then use the index of the matrix.| Input |While Dense Retriever uses the index of the matrix, an output of the document was inserted into a deep learning encoder.|
+|Convenient and Quick<br>Strong in Out of Domain Search | Strength | Good quality of the context basis search output<br>Able to process different-sound-same-meaning words |
+|Unable to process different-sound-same-meaning words.<br>Hard to understand the context. | Weakness | Often doesn't include the keyword.|
+
