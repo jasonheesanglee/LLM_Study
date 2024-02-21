@@ -1,4 +1,11 @@
 # LLM Study
+
+------
+<img width="908" alt="image" src="https://github.com/jasonheesanglee/LLM_Study/assets/123557477/b23ff099-23e2-4687-9959-78185e6b58e9">
+<img width="908" alt="image" src="https://github.com/jasonheesanglee/LLM_Study/assets/123557477/a02f3f2e-010a-4877-a769-bb59de818b9c">
+
+------
+
 This repository is a record of learning LangChain.<br>
 The [contents](https://www.youtube.com/playlist?list=PLQIgLu3Wf-q_Ne8vv-ZXuJ4mztHJaQb_v) are from a YouTube Channer [모두의AI](https://www.youtube.com/@AI-km1yn)
 
